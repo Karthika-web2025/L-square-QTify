@@ -1,40 +1,30 @@
 .section {
-  margin: 20px;
+  padding: 20px;
 }
 
-/* Header: Top Albums + Collapse button */
 .header {
   display: flex;
-  justify-content: space-between; /* Horizontal spacing */
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px; /* Vertical spacing before grid */
+  margin-bottom: 16px;
 }
 
 .title {
-  font-size: 24px;
   color: white;
+  font-size: 24px;
   margin: 0;
-  
 }
 
-.collapseButton {
-  background-color: transparent;
-  border: 1px solid #34c94b;
+.collapse {
+  background: none;
+  border: none;
   color: #34c94b;
-  padding: 4px 12px;
-  border-radius: 4px;
   cursor: pointer;
+  font-size: 14px;
 }
 
-/* Grid layout */
 .grid {
-  display: flex; /* Flexbox grid */
+  display: flex;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 16px; /* spacing between cards */
-}
-
-/* Optional: collapse reduces grid height (like hiding some cards) */
-.collapsed {
-  max-height: 120px; /* show only first row */
-  overflow: hidden;
 }

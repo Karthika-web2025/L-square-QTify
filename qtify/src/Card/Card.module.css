@@ -1,6 +1,5 @@
 .card {
   width: 160px;
-  height: 220px;
   border-radius: 10px;
   overflow: hidden;
   background-color: #121212;
@@ -9,8 +8,7 @@
 }
 
 .imageWrapper {
-  flex: 7; /* ~70% of card height */
-  width: 100%;
+  height: 140px;
 }
 
 .image {
@@ -20,7 +18,6 @@
 }
 
 .bottomSection {
-  flex: 3; /* ~30% of card height */
   padding: 8px;
   display: flex;
   flex-direction: column;
@@ -31,14 +28,11 @@
   background-color: #121212 !important;
   color: #ffffff !important;
   border: 1px solid #34c94b;
-  width: fit-content;
   font-size: 11px;
-  height: 22px;
 }
 
 .albumName {
   font-size: 14px;
   color: white;
   margin: 0;
-  font-weight: 500;
 }
