@@ -2,29 +2,35 @@ import React from "react";
 import { Chip } from "@mui/material";
 import styles from "./Card.module.css";
 
-const Card = ({ data }) => {
+const Card = ({ data, type = "album" }) => {
   if (!data) return null;
 
-  const { image, title, follows } = data;
+  const isSong = type === "song";
 
   return (
-    <div className={styles.card} data-testid="album-card">
-      <div className={styles.imageWrapper}>
+    <div className={styles.card} data-testid="card">
+      {/* IMAGE */}
+      <div className={styles.imageContainer}>
         <img
-          src={image}
-          alt={title}
+          src={data.image}
+          alt={data.title}
           className={styles.image}
         />
-      </div>
 
-      <div className={styles.bottomSection}>
+        {/* CHIP */}
         <Chip
-          label={`${Math.floor(follows / 1000)}k Follows`}
+          label={
+            isSong
+              ? `${data.likes} Likes`
+              : `${data.follows} Follows`
+          }
           size="small"
           className={styles.chip}
         />
-        <p className={styles.albumName}>{title}</p>
       </div>
+
+      {/* TITLE */}
+      <p className={styles.title}>{data.title}</p>
     </div>
   );
 };

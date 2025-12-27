@@ -5,20 +5,27 @@ import Section from "./Section/Section";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
+    <Navbar />
+<Hero />
 
-      {/* TOP ALBUMS */}
-      <Section
-        title="Top Albums"
-        apiEndpoint="https://qtify-backend.labs.crio.do/albums/top"
-      />
+<Section
+  title="Top Albums"
+  apiEndpoint="https://qtify-backend.labs.crio.do/albums/top"
+  type="album"
+/>
 
-      {/* NEW ALBUMS */}
-      <Section
-        title="New Albums"
-        apiEndpoint="https://qtify-backend.labs.crio.do/albums/new"
-      />
+<Section
+  title="New Albums"
+  apiEndpoint="https://qtify-backend.labs.crio.do/albums/new"
+  type="album"
+/>
+
+<Section
+  title="Songs"
+  apiEndpoint="https://qtify-backend.labs.crio.do/songs"
+  type="song"
+/>
+
     </div>
   );
 }

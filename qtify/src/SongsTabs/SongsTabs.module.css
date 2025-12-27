@@ -1,0 +1,18 @@
+.tabs {
+  margin-bottom: 24px;
+}
+
+.tabs button {
+  color: #ffffff;
+  text-transform: none;
+  font-weight: 500;
+}
+
+.tabs button.Mui-selected {
+  color: #34c94b;
+}
+
+.indicator {
+  background-color: #34c94b;
+  height: 3px;
+}
