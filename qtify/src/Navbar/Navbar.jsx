@@ -11,10 +11,12 @@ const Navbar = () => {
     <header className={styles.navbar}>
       <Logo />
       <Search  placeholder="Search a album of your choice"/>
-      <Button>Give Feedback</Button>
+      <Button >Give Feedback</Button>
     </header>
   );
 };
 
 export default Navbar;
+
+
 
