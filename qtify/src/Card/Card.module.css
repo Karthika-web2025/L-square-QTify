@@ -1,0 +1,48 @@
+.card {
+  width: 160px;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden; /* ✅ prevents image overflow */
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGE TAKES ~70% */
+.imageWrapper {
+  flex: 7;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ keeps image inside card */
+}
+
+/* BOTTOM TAKES ~30% */
+.bottomSection {
+  flex: 3;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* CHIP STYLE */
+.chip {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border: 1px solid #34c94b;
+  width: fit-content;
+  font-size: 11px;
+  height: 22px;
+}
+
+/* ALBUM NAME */
+.albumName {
+  font-size: 14px;
+  color: white;
+  margin: 0;
+  font-weight: 500;
+}

@@ -37,7 +37,7 @@ const Search = ({ data = [], page }) => {   // ✅ CRITICAL FIX
         className={styles.searchIcon}
       />
 
-      <div className={styles.searchResultWrapper}>
+      {/* <div className={styles.searchResultWrapper}>
         {value.length > 0 && (
           <div className={styles.searchResult}>
             {!search.length ? (
@@ -77,7 +77,7 @@ const Search = ({ data = [], page }) => {   // ✅ CRITICAL FIX
             )}
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

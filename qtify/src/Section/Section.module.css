@@ -1,0 +1,39 @@
+.section {
+  margin: 20px;
+}
+
+/* Header: Top Albums + Collapse button */
+.header {
+  display: flex;
+  justify-content: space-between; /* Horizontal spacing */
+  align-items: center;
+  margin-bottom: 16px; /* Vertical spacing before grid */
+}
+
+.title {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+.collapseButton {
+  background-color: transparent;
+  border: 1px solid #34c94b;
+  color: #34c94b;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Grid layout */
+.grid {
+  display: flex; /* Flexbox grid */
+  flex-wrap: wrap;
+  gap: 16px; /* spacing between cards */
+}
+
+/* Optional: collapse reduces grid height (like hiding some cards) */
+.collapsed {
+  max-height: 120px; /* show only first row */
+  overflow: hidden;
+}
