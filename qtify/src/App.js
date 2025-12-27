@@ -7,7 +7,18 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <Section title="Top Albums" />
+
+      {/* TOP ALBUMS */}
+      <Section
+        title="Top Albums"
+        apiEndpoint="https://qtify-backend.labs.crio.do/albums/top"
+      />
+
+      {/* NEW ALBUMS */}
+      <Section
+        title="New Albums"
+        apiEndpoint="https://qtify-backend.labs.crio.do/albums/new"
+      />
     </div>
   );
 }
