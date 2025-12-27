@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../Card/Card";
+import Carousel from "../Carousel/Carousel";
 import styles from "./Section.module.css";
 
 const Section = ({ title, apiEndpoint }) => {
@@ -12,12 +13,12 @@ const Section = ({ title, apiEndpoint }) => {
       const res = await axios.get(apiEndpoint);
       setAlbums(res.data);
     };
-
     fetchAlbums();
   }, [apiEndpoint]);
 
   return (
     <section className={styles.section}>
+      {/* HEADER */}
       <div className={styles.header}>
         <h2>{title}</h2>
         <button onClick={() => setCollapsed(!collapsed)}>
@@ -25,11 +26,19 @@ const Section = ({ title, apiEndpoint }) => {
         </button>
       </div>
 
-      <div className={styles.grid} data-testid={title}>
-        {(collapsed ? albums.slice(0, 4) : albums).map((album) => (
-          <Card key={album.id} data={album} />
-        ))}
-      </div>
+      {/* CONDITIONAL RENDERING */}
+      {collapsed ? (
+        <Carousel
+          data={albums}
+          renderItem={(album) => <Card data={album} />}
+        />
+      ) : (
+        <div className={styles.grid}>
+          {albums.map((album) => (
+            <Card key={album.id} data={album} />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

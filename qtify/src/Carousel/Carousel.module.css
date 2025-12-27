@@ -1,29 +1,9 @@
 .carouselWrapper {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
 }
 
-.leftNavigation {
-    position: absolute;
-    left: 10px;
-    top: 40%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.rightNavigation {
-    position: absolute;
-    right: 10px;
-    top: 40%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-@media only screen and (max-width: 576px) {
-    .leftNavigation {
-        display: none;
-    }
-    .rightNavigation {
-        display: none;
-    }
+.swiper {
+  padding: 0 40px;
 }
