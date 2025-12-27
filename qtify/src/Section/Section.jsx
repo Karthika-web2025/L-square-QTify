@@ -33,6 +33,7 @@ const Section = ({ title = "Top Albums" }) => {
       {/* Header */}
       <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
+         <p >{title}</p>
         <button className={styles.collapseButton} onClick={handleToggle}>
           {collapsed ? "Show All" : "Collapse"}
         </button>
