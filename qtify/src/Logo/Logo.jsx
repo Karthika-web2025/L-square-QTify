@@ -4,14 +4,14 @@ import styles from "../Navbar/Navbar.module.css";
 const Logo = () => {
   let navigate = useNavigate();
   return (
-    <div>
+    // <div>
       <img
         src={logo}
         alt="Logo"
         className={styles.img}
         onClick={() => navigate("/")}
       />
-    </div>
+    // </div>
   );
 };
 

@@ -1,5 +1,6 @@
 .searchIcon {
   cursor: pointer;
+  background-color: white;
 }
 
 .searchResultWrapper {
