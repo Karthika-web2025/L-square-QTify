@@ -6,7 +6,7 @@ import styles from "./Section.module.css";
 
 const Section = ({ title, apiEndpoint }) => {
   const [albums, setAlbums] = useState([]);
-  const [collapsed, setCollapsed] = useState(false);
+  const [showAll, setShowAll] = useState(false); // 👈 default: Carousel
 
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -21,23 +21,25 @@ const Section = ({ title, apiEndpoint }) => {
       {/* HEADER */}
       <div className={styles.header}>
         <h2>{title}</h2>
-        <button onClick={() => setCollapsed(!collapsed)}>
-          {collapsed ? "Show All" : "Collapse"}
+        <button onClick={() => setShowAll(!showAll)}>
+          {showAll ? "Collapse" : "Show All"}
         </button>
       </div>
 
-      {/* CONDITIONAL RENDERING */}
-      {collapsed ? (
-        <Carousel
-          data={albums}
-          renderItem={(album) => <Card data={album} />}
-        />
-      ) : (
-        <div className={styles.grid}>
+      {/* TEST-EXPECTED LOGIC */}
+      {showAll ? (
+        // ✅ SHOW ALL → GRID
+        <div className={styles.grid} data-testid="album-grid">
           {albums.map((album) => (
             <Card key={album.id} data={album} />
           ))}
         </div>
+      ) : (
+        // ✅ DEFAULT → CAROUSEL
+        <Carousel
+          data={albums}
+          renderItem={(album) => <Card data={album} />}
+        />
       )}
     </section>
   );
